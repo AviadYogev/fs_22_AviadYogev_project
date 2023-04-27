@@ -1,0 +1,705 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+/* Styling for the login form*/
+/* This design was based on Codehal from is video: https://youtu.be/H8ThscWsQV8 */
+.loginScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/wall_paper2.png') no-repeat;
+    background-size:contain;
+    background-position: center;
+    animation: animateBg 5s linear infinite;   
+}
+
+.registrationScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/wall_paper2.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: animateBg 5s linear infinite;     
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loginBox {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+.loginBox form h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    
+  }
+
+  .registrationBox{
+    position: relative;
+    width: 400px;
+    height: 650px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+.registrationBox form h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    
+  }
+
+.inputBox {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:#fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+ top: -5px;
+}
+
+.inputBox p {
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    padding-bottom: 25px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:#fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+
+.inputBox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+.inputBox .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.loginMessage {
+    margin: -15px 0 15px;
+    font-size: 1.2em;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.loginBox button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+
+
+.registrationBox button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+
+
+.registrationBox button:disabled{
+    width: 100%;
+    height: 40px;
+    background: #6c6c6c;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: not-allowed;
+    font-size: 1em;
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+
+.registerLink {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registerLink p a {
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerLink p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 360px) {
+    .loginBox {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .inputBox {
+        width: 290px;
+    }
+}
+
+/* styling for screens*/  
+
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+}
+
+
+.screen {
+    margin: auto;
+    display: flex;
+    width: 90vw;
+    height: 800px;
+    max-height: 800px;
+
+}
+
+/* this is new*/ 
+#lobbyHeader {
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background: url('../images/lobby_wall_paper3.png') no-repeat;
+    background-size:cover;
+    margin: auto;
+    justify-content:center;
+}
+
+#lobbyHeader >h1 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    text-shadow: 10px 5px 10px #000000;
+    
+}
+
+/* this changed */
+/*
+td {
+
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+*/
+
+
+#divUserData{
+    flex: 1;
+    margin: 10px;
+    color: white;
+    max-width: 20%;
+    min-width: 20%;
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    
+    
+}
+
+#divUserData > table {
+    margin: auto;
+    
+}
+
+
+#divUserData > table > tbody > tr > th{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin: 10px;
+    height: 70px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(25px);
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+#divUserData > table > tbody > tr > td > img{
+    height: 128px;
+    width: 128px;
+    
+}
+
+#tblWinLose {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+
+#tblWinLose td, th{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    
+}
+
+#tblWinLose tr:first-child{
+    background: rgba(0,0,0,0.65);
+    font-size: 1.5em;
+}
+
+#tblWinLose tr:not(:first-child){
+    background: rgba(255, 255, 255, 0.65);
+    color: black;
+    font-size: 1.5em;
+}
+
+#divUserData h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    border-collapse: collapse;
+   
+}
+
+#tblWinLose th:first-child {
+    border-top-left-radius: 10px;
+}  
+#tblWinLose th:last-child {
+    border-top-right-radius: 10px;
+}
+#tblWinLose tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+#tblWinLose tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+
+#tblTrophies{
+    width: 100%;
+}
+
+
+#tblTrophies tr td{
+    border-radius: 20px;
+}
+
+#tblTrophies tr td:first-child{
+    border-radius: 50%;
+}
+
+#tblTrophies td img{
+    width: 30px;
+    height: 30px;
+}
+
+#tblTrophies td, th{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    
+
+}
+
+.grayscale { 
+    filter: grayscale(100%);
+    background-color: rgba(213, 209, 209, 0.65);
+    color: #f2f0f0;
+}
+
+.trophie {
+    background-color: rgba(228, 233, 76, 0.65);
+    color: #000;
+}
+
+
+
+#divHowToPlay{
+    flex: 2;
+    margin: 10px;
+    color: white;
+    max-width: 55%;
+    min-width: 55%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    overflow-y: scroll;
+    
+}
+
+
+
+
+#divUsersLogedIn{
+    flex: 3;
+    margin: 10px;
+    color: white;
+    max-width: 20%;
+    min-width: 20%;
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    
+}
+
+
+
+#divUsersLogedIn table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    
+}        
+
+#divUsersLogedIn th{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin: 10px;
+    height: 70px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(25px);
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+#divUsersLogedIn td{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    
+}
+
+#divUsersLogedIn td:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, .5);
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+    font-size: 2em;
+}
+
+/*
+#divUsersLogedIn td div{
+   display: flex;
+   justify-content:inherit;
+   align-items: center;
+}
+
+#divUsersLogedIn td div img{
+    flex:none;
+    margin: 2px 10px 2px 10px;
+}
+*/
+/* this changed*/
+/*
+#divUsersLogedIn tr:not(:first-child):hover{
+    background-color: coral;
+}
+
+#divUsersLogedIn tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+*/
+
+
+#gameBoard table {
+    border: 1px solid black;
+    background-color: black;
+    margin: auto;
+}
+
+#gameBoard table td {
+    border: 1px solid black;
+    height: 75px;
+    width: 75px;
+    border-radius: 5px;  
+    background-color: green;
+
+}
+
+#gameBoard table td img {
+    display: block;
+    margin: auto;
+    height: 65px;
+    width: 65px;
+}
+
+
+
+
+.cell{
+    border: 1px solid black;
+    height: 75px;
+    width: 75px;
+    border-radius: 5px;  
+    background-color: green;
+}
+
+
+
+.picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.picture {
+    width: 70px;
+    height: 70px;
+}
+  
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.selected {
+    border: 3px solid blue;
+    border-radius: 50%;
+}
+
+.lblRegMessage {
+
+    font-size: 1em;
+    color:#e02727;
+    pointer-events: none;
+  }
+
+#divUsersLogedIn img{
+    width: 70px;
+    height: 70px;
+}
+
+#gameScreen{
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background: url('../images/lobby_wall_paper3.png') no-repeat;
+    background-size:cover;
+    justify-content:space-evenly;
+    
+}
+
+#divPlayer1{
+    flex: 1;
+    height: 800px;
+    margin: 10px;
+    color: white;
+    min-width: 20%;
+    max-width: 20%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    
+}
+#divBoard{
+    flex: 2;
+    height: 800px;
+    
+    color: white;
+    min-width: 55%;
+    max-width: 55%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    margin: auto;
+
+    
+}
+
+#divGameBoard button{
+    margin-top: 10px;
+    width: 75%;
+    height: 25px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+#divTurn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#divTurn p {
+    margin: auto;
+    width: 90%;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+
+.player1Turn{
+    border-start-end-radius: 40px;
+    background:#000;
+    color: #fff;
+    text-align:left;
+}
+
+.player2Turn{
+    border-start-start-radius: 40px;
+    background: #fff;
+    color: #000;
+    text-align: right;
+    
+}
+
+
+
+#divPlayer2{
+    flex: 3;
+    height: 800px;
+    margin: 10px;
+    color: white;
+    min-width: 20%;
+    max-width: 20%;
+    text-align: center;
+    background:transparent;
+    backdrop-filter: blur(25px);
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    justify-content:space-evenly;
+    align-items: center;
+    
+
+
+}
+
+
+.winner{
+    background: #fff;
+    color: #000;
+    text-align: center;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 3em;
+    font-weight: bold;
+    
+}
