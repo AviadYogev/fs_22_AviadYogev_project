@@ -58,7 +58,7 @@
     backdrop-filter: blur(15px);
 }
 
-.loginBox form h2 {
+.loginBox div h2 {
     font-size: 2em;
     color: #fff;
     text-align: center;
@@ -78,7 +78,7 @@
     backdrop-filter: blur(15px);
 }
 
-.registrationBox form h2 {
+.registrationBox div h2 {
     font-size: 2em;
     color: #fff;
     text-align: center;
@@ -243,7 +243,7 @@
 
 }
 
-
+/* this is new*/ 
 #lobbyHeader {
     align-items: center;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -262,6 +262,19 @@
     
 }
 
+/* this changed */
+/*
+td {
+
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+*/
 
 
 #divUserData{
@@ -354,7 +367,7 @@
 
 
 #tblTrophies{
-    width: 80%;
+    width: 100%;
 }
 
 

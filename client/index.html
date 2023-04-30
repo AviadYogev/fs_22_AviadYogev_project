@@ -17,7 +17,7 @@
     <div id="divLogin" class="shown">
         <div id="loginScreen" class="loginScreen">
             <div class="loginBox">
-                <form action="">
+                <div>
                     <h2>Login</h2>
                     <div class="inputBox">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
@@ -32,11 +32,11 @@
                     <div class="loginMessage">
                         <label id="lblLoginMessage"></label>
                     </div>
-                    <button type="submit" onclick="btnLoginCliked()">Login</button>
+                    <button onclick="btnLoginCliked()">Login</button>
                     <div class="registerLink">
                         <p>Don't have an account? <a href="#" onclick="show(divRegistration)"> Register</a></p>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
     <div id="divRegistration" class="hidden">
         <div id="registrationScreen" class="registrationScreen">
             <div class="registrationBox">
-                <form action="">
+                <div>
                     <h2>Register</h2>
                     <!-- to add  a function onchance thets checking if username is taken-->
                     <div class="inputBox">
@@ -82,12 +82,12 @@
                           </div>
                         
                     </div> 
-                    <button type="submit" id="btnRegister" onclick="btnRegisterCliked()">Register</button>
+                    <button id="btnRegister" onclick="btnRegisterCliked()">Register</button>
                     <div class="registerLink">
                         <p>Allready have an account? <a href="#" onclick="show(divLogin)"> Login</a></p>
                     </div>
                     
-                </form>
+                </div>
             </div>
         </div>
     </div>
